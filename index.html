@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>WA Covid Visuallize & Interactive Web Mapping</title>
+        <title>WA Death Cases by Covid Visuallize</title>
         <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
         <!-- Including the Mapbox GL CSS file -->
         <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css" rel="stylesheet">
@@ -60,7 +60,7 @@
                 padding: 10px;
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
                 line-height: 18px;
-                height: 210px;
+                height: 190px;
                 margin-bottom: 40px;
                 width: 150px;
             }
@@ -80,7 +80,7 @@
     <body>
         <div id="map"></div>
         <div class='map-overlay' id='features'>
-            <h2>WA State Covid data</h2>
+            <h2>Washington Covid Death Case</h2>
             <div id='text-description'>
                 <p>Hover over a state!</p>
             </div>
@@ -114,21 +114,21 @@
                             'fill-color': [
                                 'step',
                                 ['get', 'deathPer10k'],
-                                '#FFEDA0',   // stop_output_0
+                                '#e5f5e0',   // stop_output_0
                                 0,          // stop_input_0
-                                '#FED976',   // stop_output_1
+                                '#c7e9c0',   // stop_output_1
                                 5,          // stop_input_1
-                                '#FEB24C',   // stop_output_2
+                                '#a1d99b',   // stop_output_2
                                 10,          // stop_input_2
-                                '#FD8D3C',   // stop_output_3
+                                '#74c476',   // stop_output_3
                                 15,         // stop_input_3
-                                '#FC4E2A',   // stop_output_4
+                                '#41ab5d',   // stop_output_4
                                 20,         // stop_input_4
-                                '#E31A1C',   // stop_output_5
+                                '#238b45',   // stop_output_5
                                 25,         // stop_input_5
-                                '#BD0026',   // stop_output_6
+                                '#006d2c',   // stop_output_6
                                 30,
-                                "#800026"
+                                "#00441b"
                             ],
                             'fill-outline-color': '#BBBBBB',
                             'fill-opacity': 0.7,
@@ -144,14 +144,14 @@
                         '30 and more'
                     ];
                     const colors = [
-                        '#FFEDA070',
-                        '#FED97670',
-                        '#FEB24C70',
-                        '#FD8D3C70',
-                        '#FC4E2A70',
-                        '#E31A1C70',
-                        '#BD002670',
-                        '#80002670'
+                        '#e5f5e0',
+                        '#c7e9c0',
+                        '#a1d99b',
+                        '#74c476',
+                        '#41ab5d',
+                        '#238b45',
+                        '#006d2c',
+                        '#00441b'
                     ];
                     // create legend
                     const death_legend = document.getElementById('legend');
